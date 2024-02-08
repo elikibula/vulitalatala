@@ -1,0 +1,40 @@
+{% extends 'website/partials/website_base.html' %} 
+{% load static %} 
+
+{% block main_content %}
+<!-- Header Section Start -->
+<header id="home" class="hero-area nav-hero">
+  <div class="overlay">
+    <span></span>
+    <span></span>
+  </div>
+
+  {# Navbar #} {% include 'website/partials/website_navbar.html' %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-xs-12">
+        <div class="contents">
+          <h5 style="color: white; font-size: large;">Ni sa Bula Vinaka.</h5>
+            <p>Davuilevu Theological College [DTC] would like to take this time to welcome viewers who are interested in tuning in to the College's website. The newly created website will serve as an 'out-side' in of DTC in that it opens up everything about the college to viewers locally and internationally. DTC understands that it can no longer confine itself in terms of location, program, academic, and structure. As everything is becoming globalized, DTC knows that this is the 'given' sea current of the college's present and future endeavors. It is practically unavoidable.</p><br>
+            <p>In opening up, DTC is providing for web viewing the first thirteen pages of the 2024 Handbook. In it, one will come to know life behind the scene here at DTC. Through pictures and snapshots, life at DTC will be publicly available. DTC undoubtedly will benefit from this breakthrough, inasmuch as others may benefit as well. Real business of the college, lecturers, welcome by the President of the Methodist Church in Fiji Rev. Dr. Semisi Turagavou, welcome by the Principal Rev. Savenaca Vuetanavanua, 2024 calendar, Institutional Values, Academic Authority and Governance, form part of this first public viewing.</p><br>
+            <p>Do expect that DTC will add more and broaden the contents of her website. Yes, Courses taken here, current and future academic pathway, lecturers, writing papers, and future planning will form part of that initiative. Church service and Holy Communion are done on a weekly basis. In a small step, our Worship here at the college on 13. 2. 24 from 8 am, will be coming to you through livestream. So, join in and stay connected as the Vice Principal of the College the Rev. Mesulame Senimoli will be steering the boat into this interesting territory.</p><br>
+            <p>Welcome everyone!</p><br><br>
+            <p>Rev. Savenaca Vuetanavanua<br>PRINCIPAL</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-xs-12 p-0">
+        <div class="intro-img">
+          <img
+            src="{% static 'landing/img/Principal.png' %}"
+            alt="School Principal"
+            style="width: 585px; height: 398px; margin-top: 80px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+{% endblock %}
