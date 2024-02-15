@@ -6,10 +6,12 @@ from django.contrib.auth import views as auth_views
 
 from django_school_management.institute.models import InstituteProfile
 from django_school_management.accounts.views import dashboard
+from django_school_management.articles.views import ArticleListView
 
-admin.site.site_header = 'Django Administration'
-admin.site.site_title = 'Django Site Admin'
-admin.site.index_title = 'Django Administration'
+
+admin.site.site_header = 'Davuilevu Theological College'
+admin.site.site_title = 'DTC Site Admin'
+admin.site.index_title = 'Davuilevu Theological College Admin'
 
 DJANGO_ADMIN_URL = settings.DJANGO_ADMIN_URL + '/'
 urlpatterns = [
@@ -17,6 +19,7 @@ urlpatterns = [
     # path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path(DJANGO_ADMIN_URL, admin.site.urls),
     path('', include('django_school_management.pages.urls')),
+    path('admin/articles/', ArticleListView.as_view(), name='inside_articles_article_changelist'),
     path('api-auth/', include('rest_framework.urls')),
     path('dashboard/', dashboard, name='index_view'),
     path('accounts/', include('allauth.urls')),

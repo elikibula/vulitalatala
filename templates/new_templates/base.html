@@ -1,0 +1,195 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>The Official Website of Davuilevu Theological College | DTC</title>
+  <meta content="" name="The Official Website of Davuilevu Theological College.">
+  <meta content="" name="DTC, Fiji, Theological, Davuilevu">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/dtcfavicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Bootsrap Modals-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Flexor
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+<!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:dtc@methodistfiji.org">dtc@methodistfiji.org</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+679 3400018</span></i>
+      </div>
+      <!--
+      <div class="cta d-none d-md-flex align-items-center">
+        <a href="#about" class="scrollto">Get Started</a>
+      </div> -->
+    </div>
+  </section>
+  
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <img src="{% static 'img/dtclogo.png' %}" alt="Davuilevu Theological College Logo" class="img-fluid">
+        <h1><a href="/">DTC Fiji</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
+          <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="{% static 'pdf/handbook.pdf' %}" download>Download Handbook (PDF)</a></li>
+              <li class="dropdown"><a href="#"><span>Departments</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Biblical Studies</a></li>
+                  <li><a href="#">Theology and Ethics</a></li>
+                  <li><a href="#">Church History</a></li>
+                  <li><a href="#">Church Ministry</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="{% url 'articles:all_articles' %}">Articles</a></li>
+          {% if request.user.is_authenticated %}
+          <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+                <li><a href="{% url 'admin:index' %}">Articles Admin</a></li>
+              </ul>              
+          </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="{% url 'account_logout' %}">
+                    Logout
+                  </a>
+                </li>
+	            {% else %}
+	            <li class="nav-item">
+                  <a class="nav-link page-scroll" href="{% url 'account_login' %}">Log In</a>
+              </li>
+              {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+</head>
+
+<body>
+
+    
+    <!-- Page Content -->
+    <div class="content">
+        {% block content %}
+        <!-- Content specific to each page will be inserted here -->
+        {% endblock %}
+    </div>
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3>Davuilevu Theological College</h3>
+            <p>
+              Davuilevu <br>
+              Nausori<br>
+              Fiji Islands<br><br>
+              <strong>Phone:</strong>+679 3400018<br>
+              <strong>Email:</strong>dtc@methodistfiji.org<br>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>              
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Other Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://ptc.ac.fj/" target="_blank">Pacific Theological College</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.otago.ac.nz/" target="_blank">Otago University</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-lg-flex py-4">
+
+      <div class="me-lg-auto text-center text-lg-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Davuilevu Theological College | DTC</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/ -->
+          Designed by <a href="https://lixtronics.pythonanywhere.com" target="_blank">lixtronics</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+        <a href="https://www.facebook.com/groups/732315071861898" class="facebook"><i class="bx bxl-facebook" target="_blank"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src=" {% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+{% extends 'new_templates/base.html' %} 
+{% load static %}
+
+
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container" data-aos="fade-in">
+      <h1>Welcome to Davuilevu Theological College</h1>
+      <h2>Ni sa bula vinaka.</h2>
+      <!-- <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div> -->
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-4 col-lg-5" data-aos="fade-up" href="#" data-toggle="modal" data-target="#historicalModal">
+            <div class="content">
+              <h3>Historical Background of Davuilevu Theological College</h3>
+              <p>
+                When the Wesleyan Methodist Missionaries arrived in 1835, serious consideration of introducing theological training in Fiji was at the forefront of their mission work.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-7 d-flex" href="#">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-toggle="modal" data-target="#principalModal">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <img src="{% static 'img/principal.png' %}" alt="Principal" style="width: 64px; height: 64px;">
+                    <h4>Welcome by the Principal</h4>
+                    <p>Davuilevu Theological College [DTC] like to take this time to welcome viewers who are interested in tuning in to the Colleges’ website.  </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200" href="#" data-toggle="modal" data-target="#presidentlModal">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <img src="{% static 'img/mcifpresident.png' %}" alt="Principal" style="width: 64px; height: 64px;">
+                    <h4>The MCIF Presidents welcome & Vision</h4>
+                    <p>It is indeed an honor and my privilege to note something visible and readable on the 2024 Handbook of Davuilevu Theological College.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300" href="#" data-toggle="modal" data-target="#forewordModal">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <img src="{% static 'img/principal.png' %}" alt="Principal" style="width: 64px; height: 64px;">
+                    <h4>Principal's Foreword</h4>
+                    <p>As Principal of the College, I take this time and space to welcome each and every member of the Davuilevu Theological College and the Methodist family at large.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative" data-aos="fade-right">
+            <a href="{% static 'img/aboutus.jpg' %}"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h2 data-aos="fade-up">About us</h2>
+            <h3 data-aos="fade-up"></h3>
+            <p data-aos="fade-up"></p>
+
+            <div class="icon-box" data-aos="fade-up" href="#" data-toggle="modal" data-target="#visionModal">
+              <div class="icon"><i class="bx bx-glasses-alt"></i></div>
+              <h4 class="title"><a>Our Vision</a></h4>
+              <p class="description">The vision stands alongside the Ministry of the Word, that is, the Old and New Testaments.....</p>
+            </div>          
+
+            <div class="icon-box" data-aos="fade-up" href="#" data-toggle="modal" data-target="#missionModal">
+              <div class="icon"><i class="bx bx-up-arrow"></i></div>
+              <h4 class="title"><a href="#" >Our Mission</a></h4>
+              <p class="description">To prepare men and women fully for ordained ministry for the Methodist Church in Fiji through effective spiritual and theological training and development.....</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100" href="#" data-toggle="modal" data-target="#objectiveModal">
+              <div class="icon"><i class="bx bx-down-arrow"></i></div>
+              <h4 class="title"><a href="">Our Objectives</a></h4>
+              <p class="description">to direct a student to understand the vitality of spiritual and character formation, where his or her faith, repentance, freedom from sin, justification, renewal, sanctity, scriptural holiness and being a child of God are of utmost priority.....</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= 
+    <section id="clients" class="clients">
+      <div class="container" data-aos="fade-up">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-1.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-2.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-3.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-4.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-5.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-6.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-7.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-8.png' %}" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Clients Section --> 
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Departments</h2>
+          <p>The College have 4 departments of study.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-book-bookmark"></i></div>
+              <h4 class="title"><a href="">Biblical Studies</a></h4>
+              <p class="description">The Biblical Studies Department</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="">Theology and Ethics</a></h4>
+              <p class="description">The Theology and Ethics Department</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title"><a href="">Church History</a></h4>
+              <p class="description">The Church History Department</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-binoculars"></i></div>
+              <h4 class="title"><a href="">Church Ministry</a></h4>
+              <p class="description">The Church Ministry Department</p>
+            </div>
+          </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-up">Staff Members</h2>
+          <p data-aos="fade-up">These are the administration and faculty staff members.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/principal.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Savenaca Vuetanavanua</h4>
+                <span>Principal & HOD Theology</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/viceprincipal.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Mesulame Senimoli</h4>
+                <span>Vice Principal/ Lecturer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/bola.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Kameli Bola Waqalevu</h4>
+                <span>Dean of Studies</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/tigarea.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Raki Tigarea</h4>
+                <span>Registrar/HOD History</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/votomosi.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Mereia Votomosi</h4>
+                <span>HOD Biblical Studies</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/taniela.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Taniela Balenaikorodawa</h4>
+                <span>HOD Ministry</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/sefanaia.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Sefanaia Vuetikadavakimaiwai</h4>
+                <span>Lecturer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/josaia.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rev. Josaia Betomakita</h4>
+                <span>Lecturer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/lynda.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mrs. Linda Powell-Vakalahi</h4>
+                <span>Bursar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/Susana.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ms Susana Bainivalu</h4>
+                <span>Records Clerk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/receptionist.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4></h4>
+                <span>Receptionist</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="{% static 'img/team/librarian.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mrs. Aneeta Reuben</h4>
+                <span>Asst. Librarian</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-up">Contact Us</h2>
+          <p data-aos="fade-up"></p>
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up">
+            <div class="info-box">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Davuilevu Theological College, Davuilevu, Nausori, Fiji Islands</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-box">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>dtc@methodistfiji.org</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-box">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+679 3400018</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- Mission Modal -->
+    <div class="modal fade" id="forewordModal" tabindex="-1" role="dialog" aria-labelledby="forewordModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="forewordModalLabel">Principal's Foreword</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <p><p>As Principal of the College, I take this time and space to welcome each and every member of the Davuilevu Theological College and the Methodist family at large. The College belongs to you, in as much as you belong to the college, that relationship and connection have proven stronger over the course of 116 years since the College moved from Navuloa to Davuilevu in 1908.</p>
+                  <p>I took over the reign of leadership of the college after my predecessor the Rev. Dr. Jolami Lasawa ascends to the position as General Secretary of the Methodist Church in Fiji. I cannot thank him enough for the enormous effort he has shown over the years in directing this learning community in all aspects of college life. And I salute his family as well.</p>
+                  <p>This academic year is a full house one in that all three streams of Diplomas [Years 1-3], and the Bachelor of degree Year Three, are part of the Academic Programme. More to that is the fact that DTC will be gearing up for the 2025 Accreditation Processes and the college will be preparing for this programme accreditation mandate this year. It implies that DTC is accredited by the Higher Education Commission Fiji [HECF], and the South Pacific Association of Theological Schools [SPATS]. Both these accrediting bodies have really lifted the quality and standard of Theological Education. This is a green light in that Theological Education here at DTC cannot really afford to be lagging behind, or remain complacent in terms of development, striving to be relevant, be influential, and be in par with the challenges and opportunities of a contemporary Fiji.</p>
+                  <p>This year will mark the preparation for the launching of the Master’s Degree in 2025. It is a far cry from the years of Lth., Diploma, and BD as standard academic program here at DTC. PreparationS include designing new courses, designing pathways for the program, acquiring the services of brilliant mind in the field, uplifting of infrastructure, getting the program accredited by SPATS and HECF, and the financial side of this higher standard of academic learning. Shortly, DTC will witness the opening of the new Master’s Program building to coincide with the launching next year. That building will remain a living testimony to the financial contribution of present and past Ministers within the MCIF. And to add on to that, it showcases what Ministers can further contribute to the MCIF in terms of finances using the concept of ‘kacivi yaca’.</p>
+                  <p>Ecumenism is very much alive in DTC with the inclusion of students from the Anglican Church. However, courses here at DTC are in themselves transcending the boundary of a ‘confined ecclesiological way of Theological thinking’, to a broader and more inclusive one for that matter. Arguably, courses are doing wonders in these aspects of academic journey. DTC intends to reaffirm that its roots are deeply entrenched in the soil of Methodism with newness, and freshness. The life and work of our current and future Ministers will be shaped, and molded by a sort of theology that is deeply stooped in the soil of Methodism in Fiji. That in-depth knowledge will direct the 2024 theme “Towards a Quality and Effective Theological Education”. And DTC will think deeply into achieving that theme. With certainty and hope, DTC will venture into the end of the year graduation in both programs of study. Wishing DTC a blessed Academic Year.</p><br>
+                  <p>Rev. Savenaca Vuetanavanua</p>
+                  <p>PRINCIPAL</p>
+                  </p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Principals Welcome Modal -->
+    <div class="modal fade" id="principalModal" tabindex="-1" role="dialog" aria-labelledby="principalModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="principalModalLabel">Principal's Welcome</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <p>Ni sa Bula Vinaka.</p>
+                <p>Davuilevu Theological College [DTC] like to take this time to welcome viewers who are interested in tuning in to the Colleges’ website. The newly created website will serve as an ‘out-side’ in of DTC in that it opens up everything about the college to viewers locally and internationally. DTC understands that it can no longer confine herself in terms of location, program, academic and structure. As everything are becoming globalized, DTC knows that this is the ‘given’ sea current of the colleges’ present and future endeavors. It is practically unavoidable.</p>
+                <p>In opening up, DTC is providing for web viewing the first thirteen pages of the 2024 Handbook. In it one will come to know life behind the scene here at DTC. Through pictures and snapshots, life at DTC will be publicly available. DTC undoubtedly will benefit from this breakthrough, inasmuch as others may benefit as well. Real business of the college, lecturers, welcome by the President of the Methodist Church in Fiji Rev. Dr. Semisi Turagavou, welcome by the Principal Rev. Savenaca Vuetanavanua, 2024 calendar, Institutional Values, Academic Authority and Governance, form part of this first public viewing.</p>
+                <p>Do expect that DTC will add more and broaden the contents of her website. Yes, Courses taken here, current and future academic pathway, lecturers, writing papers, and future planning will form part of that initiative. Church service and Holy Communion are done on a weekly basis. In a small step, our Worship here at the college on 13. 2. 24 from 8 am, will be coming to you through livestream. So, join in and stay connected as the Vice Principal of the College the Rev. Mesulame Senimoli will be steering the boat into this interesting territory.</p>
+                <p>Welcome everyone!</p>
+                <p>Rev. Savenaca Vuetanavanua</p>
+                <p>PRINCIPAL</p>
+                
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Presidents Modal -->
+    <div class="modal fade" id="presidentlModal" tabindex="-1" role="dialog" aria-labelledby="presidentlModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="presidentlModalLabel">MCIF President Message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <p>Greetings in the name of our transformer, Jesus Christ.</p>
+                <p>It is indeed an honor and my privilege to note something visible and readable on the 2024 Handbook of Davuilevu Theological College. Obviously, it is the beginning of an academic year of the institution and no doubt, in a very challenging time.</p>
+                <p>I give thanks to God almighty for his trust and support for the new leadership of the College. A new leader with his visions cannot be materialized without the support of staff members and the community. Let the communal sense of belonging and unity drive the hearts of DTC towards success at the end of the academic year. The leadership of the church is also embracing on Christian principles and virtues to guide the community of DTC into a new horizon.</p>
+                <p>Our world is moving faster to somewhere and everything is changing. The pace is unbearable and it is difficult to comprehend what is emerging and occurring within our human communities. New technologies and physical developments are pushing human beings into a new world with different mindsets and languages used in a common ground. The competitive spirit within our human society is a major concern to our religious organizations, as we always predict and foresee the unity in diversity within the household of God. Climate change is also a worrying issue for the inhabitants of our beloved country. Human beings begin to raise their concern and awareness regarding the rising sea-level and associate issues within. The behavior and attitude of humankind is becoming a worrying issue for the survival and sustainability of God’s creation in the whole world.</p>
+                <p>However, God has given us knowledge and insight to think outside the box and acquire what is relevant and appropriate for this modern age. Our College is currently offering religious discipline courses as primary tools of service on the ground. Ironically, the emergence of socio-economic issues and even political issues, challenge and confront our clergies off-guard. The curriculum of the College should be reviewed in order to respond and counter the emergence of different facet of issues. It is appropriate to design the College’s curriculum as a reflection of the current challenges of the day. We cannot escape from the new challenges that are confronting us daily.</p>
+                <p>We need to merge or blend the religious perspectives and secular views of any emerging issues in context. In this regard, the language may somehow make the difference. It’s the right time to use different lenses or glasses and to see a particular object from different angles. Different strategies with different approaches will add more strength to our mission. Hopefully, its time to make a shift and move forward cautiously with courage and determination. Our ministers and deaconesses are challenged with issues such as: conflicts or tensions within the traditional leaderships; Church and Vanua relationship; Climate change; issues surrounding the ownership and utilization of resources; indiscipline and bad management of wealth and resources; rising poverty in the country; issues of diaspora and broken families; cyber-crime and drug addiction; violence against women and children and so forth. These are real issues within our different communities.</p>
+                <p>We need to re-design and re-focus our training programs to meet the demands of our different communities. May we continue to equip and send students with appropriate tools.</p>
+                <p>May God bless our beloved College.</p><br>
+                <p>Rev. Dr. Semisi Turagavou</p>
+                <p>PRESIDENT of Methodist Church in Fiji</p>               
+                
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Historical Modal -->
+    <div class="modal fade" id="historicalModal" tabindex="-1" role="dialog" aria-labelledby="historicalModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="historicalModalLabel">Historical Background of DTC</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <p>When the Wesleyan Methodist Missionaries arrived in 1835, serious consideration of introducing theological training in Fiji was at the forefront of their mission work. That dream was actualized when the first Theological College was built in Nasima, Taveuni, Cakaudrove in 1841. Rev. John Hunt was its first Principal when 8 were registered as students. The Fiji District Meeting in 1841 resolved to close the theological institution in Nasima in early 1842 due to the disagreement of its location.</p>
+                <p>They shifted the theological institute to Viwa, Bau in 1842 and Hunt was still its head. The institution was there until 1848. Eight registered students also registered for training. It was in Viwa on 4th October 1848, John Hunt, first theological institution Principal, was called to eternal rest. On the same year, the Fiji District Meeting agreed that the theological institution be shifted to Bucainabua in Lakeba. Rev. Richard Lyth was its Principal. The Theological College was in Lakeba from 1848 until it closed down in 1855.</p>
+                <p>After a year of confusion of where the institution to be shifted, the missionaries agreed that Mataisuva in Rewa be the appropriate sight. Rev. John Polglase was its Principal. It began in 1857 until 1860 when it was again closed. The Theological Institution moved to Kadavu in 1861 and located at Richmond, until 1872. Three staff members managed the institution. They were Reverends Jessey Carey, Joseph Nettleton, and Joseph Waterhouse.</p>
+                <p>From 1873, when Rev. W. A. Heighway was the Principal, the theological institute was shifted to Navuloa, the land belonged to the Naibati tribe in Buretu. The institution was there until 1907. Location continued to be a problem. In Navuloa, the Fiji District Meeting resolved after some serious discussions that the location of the institution be moved to Davuilevu as the Navuloa land is unproductive and swampy. Members of the District Meeting preferred that Davuilevu be the appropriate sight. In 1908, the final journey of the theological institution canoe landed at Davuilevu. The first Principal in Davuilevu was W. E. Bennett, the presiding Principal of Navuloa.</p>
+                <p>One of the purposes of shifting the Theological institute from Navuloa to Davuilevu was to let the Theological Institute closely follow the new developments the Government of Fiji has initiated for the development of this country. As the theological institute’s purpose is mission, it has to embrace its prophetic mission in a changing face of Fiji by encountering the negative side of civilization.</p>
+                <p>In addition to that, the Fiji Mission believed that the institute should move into the idea of enhancing quality theological training in a changed Fiji. Rev. Dr. Allan Tippet in 1960 paved the way forward of the idea when he partnered the Davuilevu Theological Institute with the Theological Institute in Melbourne, Australia. During that time, the Davuilevu Theological Institute awarded the Degree of LTh or Licentiate of Theology. After some year, the degree awarded became the Diploma in Theology. In 2003, the Bachelor of Divinity program started. Now the theological institute has moved on into the deeper water of enhancing theological training to its ordained ministry by introducing the program of Bachelor of Ministry in 2005. From Nasima in 1841 to Davuilevu in 1908, the theological institute embraces what the mission pioneers believed, that theological education and its mission is important in Fiji.</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Vision Modal -->
+    <div class="modal fade" id="visionModal" tabindex="-1" role="dialog" aria-labelledby="visionModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="visionModalLabel">Our Vision</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <strong>1.1</strong> The College vision is: Effective and transforming ordained ministry for a successful society in a changing world through sound spiritual formation and development.
+              </p>
+              <p>
+                  <strong>1.2</strong> The College’s vision is rooted in the commitment by the Methodist Church to ensure its effective role in the future of Fiji, thus the institutionalized study of Methodist divinity in Fiji.
+              </p>
+              <p>
+                  <strong>1.3</strong> The vision stands alongside the Ministry of the Word, that is, the Old and New Testaments.
+              </p>
+              
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Mission Modal -->
+    <div class="modal fade" id="missionModal" tabindex="-1" role="dialog" aria-labelledby="missionModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="missionModalLabel">Our Mission</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <strong>2.1</strong> The College’s mission since the establishment of the first training institution is to train ministers of the Methodist Church in Fiji for ordination, as follows:
+              </p>
+              <ol>
+                  <li>(a) To prepare men and women fully for ordained ministry for the Methodist Church in Fiji through effective spiritual and theological training and development;</li>
+                  <li>(b) To encourage higher theological understanding and enhanced spirituality in an evolving society through a well-trained Christian workforce and leadership.</li>
+              </ol>        
+              
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Objectives Modal -->
+    <div class="modal fade" id="objectiveModal" tabindex="-1" role="dialog" aria-labelledby="objectiveModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="objectiveModalLabel">Our Objectives</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <strong>3.1</strong> To achieve its mission in the training and preparation of ministers, the College has the following four main objectives:
+              </p>
+              <ol>
+                  <li>(a) To direct a student to understand the vitality of spiritual and character formation, where his or her faith, repentance, freedom from sin, justification, renewal, sanctity, scriptural holiness, and being a child of God are of utmost priority;</li>
+                  <li>(b) To train and instil humility, piety, patience, diligence, and wisdom in students so they become successful Methodist Ministers;</li>
+                  <li>(c) To develop a student’s critical thinking relevant to the pursuit of academic excellence;</li>
+                  <li>(d) To instil, in a student, an earnest desire for knowledge and wisdom through advanced scholarship of the Word of God and God’s love for humanity.</li>
+              </ol>
+              
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+  </main><!-- End #main -->
+  <script>
+    $(document).ready(function () {
+        $("#missionModalBtn").click(function () {
+            $("#missionModal").modal("show");
+        });
+
+        $("#principalModalBtn").click(function () {
+            $("#principalModal").modal("show");
+        });
+        $("#presidentModalBtn").click(function () {
+            $("#presidentModal").modal("show");
+        });
+        $("#historicallModalBtn").click(function () {
+            $("#historicallModal").modal("show");
+        });
+    });
+</script>
+
+
+{% endblock %}
+
+

@@ -10,6 +10,7 @@ from django_school_management.students.forms import StudentForm
 from django_school_management.students.models import AdmissionStudent
 from django_school_management.articles.models import Article
 from django_school_management.students.tasks import send_admission_confirmation_email
+from django_school_management.articles.views import Article, AllArticles
 
 
 def index(request):
@@ -23,10 +24,19 @@ def index(request):
         'recent_blogs': recent_blogs,
         'departments': departments,
     }
-    return render(request, 'website/index.html', ctx)
+    return render(request, 'new_templates/index.html', ctx)
 
 def aboutus_view(request):
     return render(request, 'website/aboutus.html')
+
+def blog_view(request):
+    articles = Article.objects.all()  # Assuming you have an Article model
+    context = {
+        'articles': articles
+    }
+    
+    return render(request, 'new_templates/blog.html')
+
 
 def online_admission(request):
     if request.method == 'POST':

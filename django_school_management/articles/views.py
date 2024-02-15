@@ -21,6 +21,15 @@ from .tasks import send_latest_article
 from permission_handlers.administrative import user_is_teacher_or_administrative
 
 
+class ArticleListView(ListView):
+    model = Article
+    template_name = 'articles/articles.html'  # Replace with your template file
+    context_object_name = 'articles'
+    paginate_by = 10  # Adjust as needed
+
+    def get_queryset(self):
+        return Article.objects.all()  # Customize the queryset as needed
+
 class AllArticles(ListView):
     model = Article
     queryset = Article.published.all()

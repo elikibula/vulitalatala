@@ -190,8 +190,10 @@ USE_TZ = True
 STATIC_ROOT = str(BASE_DIR / 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    str(BASE_DIR / 'static')
+    str(BASE_DIR / 'static'),  # First set of static files
+    str(BASE_DIR / 'static_old'),  # Second set of static files
 ]
+
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
@@ -215,7 +217,7 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 # login/register redirects
 
 LOGIN_REDIRECT_URL = 'account:profile_complete'
-LOGOUT_REDIRECT_URL = 'account_login'
+LOGOUT_REDIRECT_URL = '/'
 
 LOGIN_URL = 'account:profile_complete'
 LOGOUT_URL = 'account_logout'

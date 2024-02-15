@@ -1,4 +1,4 @@
-{% extends 'website/partials/website_base.html' %} 
+{% extends 'new_templates/base.html' %} 
 {% load static %} 
 {% load crispy_forms_tags %} 
 
@@ -20,10 +20,10 @@
 {% endblock extra_css %}
   
 
-{% block main_content %}
+{% block content %}
 <!-- Header Section Start -->
 <header id="home" class="mt-5">
-  {% include 'website/partials/website_navbar.html' %}
+  
 </header>
 
 <!-- section profile detail -->
@@ -31,7 +31,7 @@
   <div class="container">
     <div class="row">
       <!-- profile card -->
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="card text-center">
           <div class="card-header">{{ user.get_approval_status_display }}</div>
           <div class="card-body d-flex">
@@ -76,8 +76,17 @@
         </div>
       </div>
 
+
+      <div class="col-md-6">
+
+
+
+      </div>
+
+
+
       <!-- Profile Complete Form -->
-      <div class="col-md-8">
+      <!-- <div class="col-md-8">
         <div class="card p-3">
           {% if user.approval_status != 'a' %}
           <div class="alert alert-warning" role="alert">
@@ -104,7 +113,7 @@
             {% endfor %} 
           {% endif %} 
           
-          <!-- Form for UnVerified User (SENDS A VERIFICATION REQUEST) -->
+          (COMMMENT THIS LINE) Form for UnVerified User (SENDS A VERIFICATION REQUEST) 
           {% if user.approval_status != 'a' %}
             <form method="post">
               <div
@@ -122,7 +131,7 @@
                 </button>
               </div>
           {% else %}
-            <!-- Form for verfied users (UPDATES USER PROFILE DETAILS) -->
+            (COMMMENT THIS LINE)  Form for verfied users (UPDATES USER PROFILE DETAILS) 
             <form action="" method="POST" 
               enctype="multipart/form-data"
               id="profile-edit-form"
@@ -150,7 +159,7 @@
           </form>
           {% endif %}
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
